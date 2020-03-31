@@ -6,6 +6,7 @@
 
 ## how to build and run
 1. setup JDK 11 , maven 3.3 , Tomcat 9.0.22 or above on local
+2. modify value of "server_url" to local Tomcat url in {project_location}/src/main/resources/application.properties if neccessary
 2. run command "mvn clean install" to generate war under /{project_location}/target
 3. copy finance-test-XX.war to {Tomcat_location}/webapps
 4. test api by browser or postman with raml specification below
