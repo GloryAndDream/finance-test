@@ -1,0 +1,34 @@
+#%RAML 1.0
+title: Finace-Test
+version: 0.1
+schemas: 
+  - transfer-money-request-schema: !include schema/transfer-money-request-schema.jsd
+  - transfer-money-repsonse-schema: !include schema/transfer-money-response-schema.jsd
+  - account-balance-response-scheme: !include schema/account-balance-response-scheme.jsd
+
+/api/account-balance/{accountNo}:
+  displayName: check account balance
+  get:
+    responses: 
+      200:
+        body:
+          application/json:
+            schema: account-balance-response-scheme
+      404:
+        description: Request Not Found
+            
+/api/transfer-money:
+  displayName: transfer money between accounts
+  post:
+    body:
+      application/json:
+        schema: transfer-money-request-schema
+    responses:
+	  200:
+        description: transfer money succsfully
+        body:
+          application/json: 
+            schema: transfer-money-response-schema
+      404:
+        description: Request Not Found
+    

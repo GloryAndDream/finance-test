@@ -1,0 +1,25 @@
+{
+	"schema":"http://json-schema.org/draft-04/schema#",
+	"type": ["object","null"]
+	"properties": {
+				"transactionID " :{
+					"type": ["string","null"]
+				},
+				"status" :{
+					"type": ["string","null"]
+				},
+				"message" :{
+					"type": ["string","null"]
+				},
+				"accountNo" :{
+					"type": ["string","null"]
+				},
+				"accountBalance" : {
+					"type": ["number","null"]
+				},
+				"currency" : {
+					"type": ["string","null"]
+				}
+				
+			}		
+}
